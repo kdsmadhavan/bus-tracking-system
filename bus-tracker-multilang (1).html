@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -201,6 +200,7 @@
   <button class="active" onclick="showView('overview', event)" data-i18n="tab_overview">Overview</button>
   <button onclick="showView('buses', event)" data-i18n="tab_buses">Bus Fleet</button>
   <button onclick="showView('students', event)" data-i18n="tab_students">Students</button>
+  <button onclick="showView('administrators', event)" data-i18n="tab_administrators">Administrators</button>
   <button onclick="showView('alerts', event)" data-i18n="tab_alerts">Alerts</button>
 </nav>
 
@@ -265,6 +265,12 @@
     <ul id="studentList" class="student-list"></ul>
   </section>
 
+  <!-- Administrators Tab -->
+  <section id="administrators" class="view">
+    <h2 data-i18n="administrator_list">Administrator List</h2>
+    <ul id="administratorList" class="administrator-list"></ul>
+  </section>
+
   <!-- Alerts Tab -->
   <section id="alerts" class="view">
     <h2 data-i18n="all_alerts">All Alerts</h2>
@@ -287,6 +293,7 @@ const TRANSLATIONS = {
     tab_overview: "Overview",
     tab_buses: "Bus Fleet",
     tab_students: "Students",
+    tab_administrators: "Administrators",
     tab_alerts: "Alerts",
     stat_total_buses: "Total Buses",
     stat_active_routes: "Active Routes",
@@ -300,6 +307,7 @@ const TRANSLATIONS = {
     recent_alerts: "Recent Alerts",
     bus_fleet: "Bus Fleet",
     student_list: "Student List",
+    administrator_list: "Administrator List",
     all_alerts: "All Alerts",
     toast_enter: "{bus} has entered the school zone",
     toast_leave: "{bus} has left the school zone",
@@ -315,6 +323,7 @@ const TRANSLATIONS = {
     tab_overview: "மேலோட்டம்",
     tab_buses: "பேருந்து பட்டியல்",
     tab_students: "மாணவர்கள்",
+    tab_administrators: "நிர்வாகிகள்",
     tab_alerts: "எச்சரிக்கைகள்",
     stat_total_buses: "மொத்த பேருந்துகள்",
     stat_active_routes: "செயலில் உள்ள பாதைகள்",
@@ -328,6 +337,7 @@ const TRANSLATIONS = {
     recent_alerts: "சமீபத்திய எச்சரிக்கைகள்",
     bus_fleet: "பேருந்து பட்டியல்",
     student_list: "மாணவர் பட்டியல்",
+    administrator_list: "நிர்வாகி பட்டியல்",
     all_alerts: "அனைத்து எச்சரிக்கைகள்",
     toast_enter: "{bus} பள்ளி பகுதியுள் நுழைந்தது",
     toast_leave: "{bus} பள்ளி பகுதியை விட்டு வெளியேறியது",
@@ -343,6 +353,7 @@ const TRANSLATIONS = {
     tab_overview: "ओवरव्यू",
     tab_buses: "बस सूची",
     tab_students: "छात्र",
+    tab_administrators: "प्रशासक",
     tab_alerts: "अलर्ट",
     stat_total_buses: "कुल बसें",
     stat_active_routes: "सक्रिय रूट",
@@ -356,6 +367,7 @@ const TRANSLATIONS = {
     recent_alerts: "हालिया अलर्ट",
     bus_fleet: "बस सूची",
     student_list: "छात्र सूची",
+    administrator_list: "प्रशासक सूची",
     all_alerts: "सभी अलर्ट",
     toast_enter: "{bus} स्कूल क्षेत्र में प्रवेश कर गई है",
     toast_leave: "{bus} स्कूल क्षेत्र से बाहर गई है",
@@ -371,6 +383,7 @@ const TRANSLATIONS = {
     tab_overview: "ఓవర్వ్యూ",
     tab_buses: "బస్సుల జాబితా",
     tab_students: "విద్యార్థులు",
+    tab_administrators: "నిర్వాహకులు",
     tab_alerts: "అలర్ట్స్",
     stat_total_buses: "మొత్తం బస్సులు",
     stat_active_routes: "సక్రియ మార్గాలు",
@@ -384,6 +397,7 @@ const TRANSLATIONS = {
     recent_alerts: "తాజా అలర్ట్స్",
     bus_fleet: "బస్సుల జాబితా",
     student_list: "విద్యార్థుల జాబితా",
+    administrator_list: "నిర్వాహకుల జాబితా",
     all_alerts: "అన్ని అలర్ట్స్",
     toast_enter: "{bus} పాఠశాల ప్రాంతంలోకి ప్రవేశించింది",
     toast_leave: "{bus} పాఠశాల ప్రాంతం నుండి బయటకు వెళ్లింది",
@@ -399,6 +413,7 @@ const TRANSLATIONS = {
     tab_overview: "ഓവർവ്യൂ",
     tab_buses: "ബസ് പട്ടിക",
     tab_students: "വിദ്യാർത്ഥികൾ",
+    tab_administrators: "നിര്വാഹകർ",
     tab_alerts: "അലർട്ടുകൾ",
     stat_total_buses: "ആകെ ബസുകൾ",
     stat_active_routes: "സജീവ റൂട്ടുകൾ",
@@ -412,6 +427,7 @@ const TRANSLATIONS = {
     recent_alerts: "സമീപകാല അലർട്ടുകൾ",
     bus_fleet: "ബസ് പട്ടിക",
     student_list: "വിദ്യാർത്ഥി പട്ടിക",
+    administrator_list: "നിര്വാഹക പട്ടിക",
     all_alerts: "എല്ലാ അലർട്ടുകളും",
     toast_enter: "{bus} സ്കൂൾ മേഖലയിലേക്ക് പ്രവേശിച്ചു",
     toast_leave: "{bus} സ്കൂൾ പ്രദേശത്തുനിന്ന് പുറത്തിറങ്ങി",
@@ -427,6 +443,7 @@ const TRANSLATIONS = {
     tab_overview: "ಒವರ್‌ವ್ಯೂ",
     tab_buses: "ಬಸ್ ಪಟ್ಟಿ",
     tab_students: "ವಿದ್ಯಾರ್ಥಿಗಳು",
+    tab_administrators: "ನಿರ್ವಾಹಕರು",
     tab_alerts: "ಎಚ್ಚರಿಕೆ",
     stat_total_buses: "ಒಟ್ಟು ಬಸ್‌ಗಳು",
     stat_active_routes: "ಸಕ್ರಿಯ ಮಾರ್ಗಗಳು",
@@ -440,6 +457,7 @@ const TRANSLATIONS = {
     recent_alerts: "ಇತ್ತೀಚಿನ ಎಚ್ಚರಿಕೆ",
     bus_fleet: "ಬಸ್ ಪಟ್ಟಿ",
     student_list: "ವಿದ್ಯಾರ್ಥಿ ಪಟ್ಟಿ",
+    administrator_list: "ನಿರ್ವಾಹಕ ಪಟ್ಟಿ",
     all_alerts: "ಎಲ್ಲ ಎಚ್ಚರಿಕೆ",
     toast_enter: "{bus} ಶಾಲಾ ಪ್ರದೇಶಕ್ಕೆ ಪ್ರವೇಶಿಸಿದೆ",
     toast_leave: "{bus} ಶಾಲಾ ಪ್ರದೇಶದಿಂದ ಹೊರಟಿದೆ",
@@ -485,6 +503,18 @@ function setLanguage(lang) {
     }
   });
 
+  // Update tab button text
+  document.querySelectorAll('.main-nav button[data-i18n]').forEach(btn => {
+    const key = btn.getAttribute('data-i18n');
+    btn.textContent = dict[key] || TRANSLATIONS.en[key] || btn.textContent;
+  });
+
+  // Update section headings
+  document.querySelectorAll('section h2[data-i18n]').forEach(h2 => {
+    const key = h2.getAttribute('data-i18n');
+    h2.textContent = dict[key] || TRANSLATIONS.en[key] || h2.textContent;
+  });
+
   // Prefix label for last updated
   const lastLabel = dict['last_updated'] || TRANSLATIONS.en['last_updated'];
   const container = document.querySelector('.last-update');
@@ -492,7 +522,6 @@ function setLanguage(lang) {
     const timeSpan = document.getElementById('lastUpdate');
     container.innerHTML = `${lastLabel}<span id="lastUpdate">${timeSpan ? timeSpan.textContent : '--:--:--'}</span>`;
   }
-  // Update tab active text (button innerText already set via i18n)
 }
 
 function format(dictKey, values = {}) {
@@ -511,18 +540,46 @@ let insideGeofence = false;
 
 // ===== SAMPLE DATA =====
 let buses = [
-  { id: 1, number: "Bus-1", driver: "John Smith", route: "North Zone", status: "on-route" },
-  { id: 2, number: "Bus-2", driver: "Mary Johnson", route: "East Zone", status: "delayed" },
-  { id: 3, number: "Bus-3", driver: "James Brown", route: "South Zone", status: "idle" }
+  {
+    id: 1,
+    number: "Bus-1",
+    driver: "Sanju",
+    route: "North Zone",
+    status: "on-route",
+    capacity: 40,
+    gpsDeviceId: "6384564923"
+  },
+  {
+    id: 2,
+    number: "Bus-2",
+    driver: "Sanjay",
+    route: "East Zone",
+    status: "delayed",
+    capacity: 35,
+    gpsDeviceId: "6384564924"
+  },
+  {
+    id: 3,
+    number: "Bus-3",
+    driver: "Dhanush",
+    route: "South Zone",
+    status: "idle",
+    capacity: 50,
+    gpsDeviceId: "6384564925"
+  }
 ];
 let students = [
-  { name: "Alice", bus: "Bus-1" },
-  { name: "Bob", bus: "Bus-2" },
-  { name: "Charlie", bus: "Bus-3" }
+  { id: 101, name: "Abishek", bus: "Bus-1", grade: "5", parentContact: "9876543210" },
+  { id: 102, name: "Vignesh", bus: "Bus-2", grade: "6", parentContact: "9876543211" },
+  { id: 103, name: "Sam", bus: "Bus-3", grade: "7", parentContact: "9876543212" }
 ];
 let alerts = [
   { id: 1, message: "Bus-2 is delayed by 10 minutes" },
   { id: 2, message: "Bus-1 is near your stop" }
+];
+let administrators = [
+  { id: 1, name: "Principal Sharma", role: "Principal", contact: "principal@school.edu" },
+  { id: 2, name: "Transport Manager Rao", role: "Transport Manager", contact: "transport@school.edu" }
 ];
 
 // ===== TOASTS =====
@@ -572,6 +629,15 @@ function renderAlerts() {
   recentList.innerHTML = ""; allList.innerHTML = "";
   alerts.forEach(a => { const li = document.createElement("li"); li.textContent = a.message; allList.appendChild(li); });
   alerts.slice(0,5).forEach(a => { const li = document.createElement("li"); li.textContent = a.message; recentList.appendChild(li); });
+}
+function renderAdministrators() {
+  const ul = document.getElementById("administratorList");
+  ul.innerHTML = "";
+  administrators.forEach(a => {
+    const li = document.createElement("li");
+    li.textContent = `${a.name} (${a.role}) - ${a.contact}`;
+    ul.appendChild(li);
+  });
 }
 
 // ===== MAP =====
@@ -629,7 +695,12 @@ function init() {
   setLanguage(SUPPORTED.includes(preferred) ? preferred : 'en');
   document.getElementById('lang').value = localStorage.getItem('lang') || 'en';
 
-  renderStats(); renderStudents(); renderBuses(); renderAlerts(); fetchBusLocation();
+  renderStats();
+  renderStudents();
+  renderBuses();
+  renderAdministrators();
+  renderAlerts();
+  fetchBusLocation();
 }
 init();
 
